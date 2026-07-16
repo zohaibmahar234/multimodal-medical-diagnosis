@@ -1,0 +1,42 @@
+# Multi-Modal Medical Diagnosis System — pinned requirements
+# Target interpreter: Python 3.10 or 3.11 (tested against 3.10.x / 3.11.x).
+# Avoid Python 3.12+/3.13 — some pinned wheels below (esp. torch/torchvision
+# combos and pytorch-grad-cam) are not guaranteed to publish wheels for the
+# newest CPython yet, which can force slow/broken source builds.
+
+# --- Core deep learning stack (CPU or CUDA build both work; install the
+#     CUDA build manually from https://pytorch.org/get-started/locally/
+#     if you have a GPU, matching torch==2.3.1) ---
+torch==2.3.1
+torchvision==0.18.1
+
+# --- Explainability ---
+# NOTE: the PyPI *distribution* name is "grad-cam" (not "pytorch-grad-cam"),
+# even though you `import pytorch_grad_cam` in code. Installing the
+# similarly-named "pytorch-grad-cam" package will fail — use this exact name.
+grad-cam==1.5.5
+
+# --- Data / scientific stack ---
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.4.2
+scipy==1.13.0
+joblib==1.4.2
+
+# --- Imaging ---
+Pillow==10.3.0
+opencv-python==4.9.0.80
+
+# --- Plotting ---
+matplotlib==3.8.4
+seaborn==0.13.2
+
+# --- App ---
+streamlit==1.34.0
+
+# --- Testing ---
+pytest==8.2.0
+
+# --- Optional: real dataset download helper ---
+kagglehub==0.2.5
+tqdm==4.66.4
