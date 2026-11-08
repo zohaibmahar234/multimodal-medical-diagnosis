@@ -1,4 +1,4 @@
-"""
+﻿"""
 streamlit_app.py
 
 Streamlit UI for the Multi-Modal Medical Diagnosis System.
@@ -24,6 +24,9 @@ from model import MultiModalDiagnosisModel  # noqa: E402
 from train import get_device  # noqa: E402
 
 st.set_page_config(page_title="Multi-Modal Medical Diagnosis", page_icon="🩺", layout="centered")
+from ui_theme import apply_theme, hero_3d
+apply_theme()
+hero_3d()
 
 CHECKPOINT_PATH = os.path.join("saved_models", "best_model.pth")
 SAVED_MODELS_DIR = "saved_models"
