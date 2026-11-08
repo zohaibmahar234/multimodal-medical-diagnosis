@@ -1,4 +1,7 @@
-# Multi-Modal Medical Diagnosis System
+﻿# Multi-Modal Medical Diagnosis System
+
+**Live demo:** https://multimodal-medical-diagnosis-zcdaqudws5m45wi3rmrfi4.streamlit.app
+
 
 A production-quality PyTorch project that predicts pneumonia from chest X-rays
 by **fusing two data modalities**:
